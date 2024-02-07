@@ -1,7 +1,6 @@
 pipeline {
   agent any
   stages {
-    /*
       stage('Delete existing deployment') {
             steps {
                 withCredentials(bindings: [
@@ -12,7 +11,7 @@ pipeline {
             }
         }
 
-*/
+
     stage('Deploy billing App') {
       steps {
         withCredentials(bindings: [
