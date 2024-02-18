@@ -28,7 +28,7 @@ metadata:
 spec:
   selector:
    app: coursemit-app-back
-  type: LoadBalancer  
+  type: NodePort  
   ports:
    - port: 8084
      nodePort: 30101
