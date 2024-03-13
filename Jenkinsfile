@@ -24,4 +24,16 @@ pipeline {
       }
 
     }
+     post {
+        success {
+            script {
+                slackSend(channel: '#jenkins', color: 'good', message: "El pipeline ha finalizado exitosamente")
+            }
+        }
+        failure {
+            script {
+                slackSend(channel: '#jenkins', color: 'danger', message: "El pipeline ha fallado")
+            }
+        }
+    }
   }
